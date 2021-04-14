@@ -2,7 +2,7 @@ const btnjQueryAJAX = document.getElementById("btnjQueryAJAX")
 const btnFetchAJAX = document.getElementById("btnFetchAJAX")
 const jQueryViewer = document.getElementById("jQueryViewer")
 const fetchViewer = document.getElementById("fetchViewer")
-const apiURL = "http://api.icndb.com/jokes/random"
+const apiURL = "https://api.icndb.com/jokes/random"
 
 btnjQueryAJAX.onclick = getJokeUsingjQuery
 btnFetchAJAX.onclick = getJokeUsingFetch
