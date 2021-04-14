@@ -1,33 +1,52 @@
+html {
+  box-sizing: border-box;
+}
 body {
   margin: 0 auto;
-  width: 80vw;
-  height: 100vh;
-  background-color: azure;
-}
-
-#container {
-  display: flex;
-  flex-direction: column;
-}
-
-.joke-viewer {
-  width: 100%;
-  height: 80vh;
-  border: 1px solid royalblue;
-  border-radius: 15px;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  
+  background-color: #FCE5D9;
+  
   display: grid;
   place-items: center;
-  font-size: 3rem;
 }
 
 .page-title {
+  font-family: 'Smokum', cursive;
+  font-size: 3em;
   text-align: center;
+  margin-top: 1em;
+  padding: 0;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
+.main-container,
+.joke-container,
+.joke-viewer {
+  display: grid;
+  place-items: center;
+}
+
+.joke-viewer {
+  margin-bottom: 1em;
+  width: 70vw;
+  min-height: 50vh;
+  
+  background-color:#FBC6AF;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  font-family: 'Rye', cursive;
+  font-size: calc(1em + 1vw);
+  padding: 1em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.chuck-and-testing-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 .btn {
@@ -41,27 +60,46 @@ body {
 }
 
 .btn--font-size {
-  font-size: 1.2rem;
-}
-
-.btn:active {
-  border-color: transparent;
+  font-size: 1em;
 }
 
 .btn--primary {
-  background-color: hsl(216, 98%, 52%);
+  background-color: hsl(36, 83%, 59%);
   color: white;
 }
 
 .btn--primary:active {
-  border-color: hsl(216, 98%, 67%);
+  border-color: hsl(36, 83%, 69%);
 }
 
 .btn--success {
-  background-color: hsl(152, 69%, 31%);
+  background-color: hsl(14, 88%, 58%);
   color: white;
 }
 
 .btn--success:active {
-  border-color: hsl(152, 69%, 41%);
+  border-color: hsl(14, 88%, 68%);
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    max-height: 50vh;
+    padding: 1rem 4vw;
+  }
+
+  .main-container  {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .joke-viewer {
+    font-size: calc(1em + 0.8vw);
+    width: auto;
+  }
+
+  .chuck-and-testing-image {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 }
